@@ -20,4 +20,4 @@ jobs:
           aws-region: ap-northeast-1
       - name: S3 sync
         working-directory: git
-        run: aws s3 sync . s3://congratulations-marriage --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+        run: aws s3 sync . s3://congratulations-marriage --delete --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --exclude "README.md"
