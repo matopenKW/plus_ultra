@@ -3,7 +3,7 @@ name: AWS S3 Sync
 on: 
   push:
     branches:
-      - 'feature/make_git_practice'
+      - 'main'
   
 
 jobs:
