@@ -18,9 +18,10 @@ func main() {
 		_, _ = fmt.Fprintf(w, "Fuga!")
 	})
 
+	fmt.Println("ListenAndServe :8080")
+
 	// ポート 8080 でサーバーを起動
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		panic(err)
 	}
-	fmt.Println("ListenAndServe end")
 }
