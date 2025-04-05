@@ -1,0 +1,10 @@
+.terraform
+.terraform.lock.hcl
+
+terraform.tfvars
+
+terraform.tfstate
+terraform.tfstate.backup
+
+ssh/id_rsa
+*.pem
