@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wallon-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /wallon
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: wallon.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: wallon-service
+                port:
+                  number: 80
