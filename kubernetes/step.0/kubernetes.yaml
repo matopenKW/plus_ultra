@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubernetes
+  namespace: default
+spec:
+  ports:
+    - name: https
+      port: 443
+      targetPort: 6443
+  selector:
+    component: apiserver
+  clusterIP: 10.96.0.1  # デフォルトのService CIDRの先頭
+  type: ClusterIP

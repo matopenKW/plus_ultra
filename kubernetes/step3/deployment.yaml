@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: wallon-deployment
 spec:
   replicas: 1
   selector:
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: wallon-service
 spec:
   type: NodePort  # 外部アクセスできるように
   selector:
