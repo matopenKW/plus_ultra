@@ -26,5 +26,8 @@ resource "google_compute_instance" "k8s_work" {
 #    startup-script = file("${path.module}/scripts/startup.sh")
   }
 
-  tags = ["k8s"]
+  tags = [
+    "k8s",
+    "k8s-node",
+  ]
 }
