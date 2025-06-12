@@ -1,0 +1,83 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# プロジェクト設定
+project_name: "Modern Web App"
+description: "React + TypeScriptを使用したモダンなWebアプリケーション"
+tech_stack:
+  - React 18
+  - TypeScript 5
+  - Vite
+  - Tailwind CSS
+  - Jest
+  - React Testing Library
+
+# AIアシスタント設定
+assistant:
+  response_style: "professional"
+  language: "ja"
+  code_generation_rules:
+    - "TypeScriptの厳格な型定義を使用する"
+    - "コンポーネントは関数コンポーネントを使用する"
+    - "React Hooksのベストプラクティスに従う"
+    - "エラーハンドリングを適切に実装する"
+    - "ユニットテストを必ず作成する"
+  constraints:
+    - "セキュリティベストプラクティスに従う"
+    - "パフォーマンスを考慮した実装を行う"
+    - "アクセシビリティに配慮する"
+    - "コードの可読性を重視する"
+
+# カスタムコマンド
+custom_commands:
+  - name: "generate-component"
+    description: "Reactコンポーネントのテンプレートを生成"
+    template: |
+      import React from 'react';
+      import { FC } from 'react';
+
+      interface Props {
+        // プロパティをここに定義
+      }
+
+      export const ComponentName: FC<Props> = ({ /* props */ }) => {
+        return (
+          <div>
+            {/* コンポーネントの内容 */}
+          </div>
+        );
+      };
+
+  - name: "generate-test"
+    description: "コンポーネントのテストファイルを生成"
+    template: |
+      import { render, screen } from '@testing-library/react';
+      import { ComponentName } from './ComponentName';
+
+      describe('ComponentName', () => {
+        it('should render correctly', () => {
+          // テストコード
+        });
+      });
+
+# プロジェクト固有のルール
+rules:
+  - "コンポーネントは1ファイル1コンポーネントの原則を守る"
+  - "型定義は別ファイルに分離する"
+  - "テストカバレッジは80%以上を維持する"
+  - "コミットメッセージは日本語で記述する"
+
+# 開発環境設定
+development:
+  editor:
+    format_on_save: true
+    tab_size: 2
+    use_spaces: true
+  linting:
+    eslint: true
+    prettier: true
+  testing:
+    jest: true
+    coverage_threshold: 80
